@@ -15,19 +15,25 @@ namespace RiotApiApp.Controllers.Api
 {
     public class MatchController : ApiController
     {
-        public async Task<IHttpActionResult> GetMatchListBySummonerName(string summonerName)
-        {
-            RiotClient.DefaultPlatformId = PlatformId.EUW1;
-            RiotClient.DefaultSettings = () => new RiotClientSettings
-            {
-                ApiKey = "RGAPI-1da5c450-e1cd-4bf9-bf29-0b243cada9bf" // Replace this with your API key, of course.
-            };
+        public IHttpActionResult GetMatchListBySummonerName(string summonerName)
+        {            
             IRiotClient client = new RiotClient();
-            //var summoner = client.GetSummonerBySummonerNameAsync(summonerName).Result;
-            //var queueTypes = new List<QueueType>();
-            //queueTypes.Add(QueueType.RANKED_FLEX_SR);
-            //var matchList = client.GetMatchListByAccountIdAsync(summoner.AccountId, rankedQueues: queueTypes).Result;
-            return Ok();
+
+            var summoner = client.GetSummonerBySummonerNameAsync(summonerName).Result;
+
+            var queueTypes = new List<QueueType>();
+            queueTypes.Add(QueueType.RANKED_FLEX_SR);
+
+            var matchList = client.GetMatchListByAccountIdAsync(summoner.AccountId, rankedQueues: queueTypes, beginIndex: 0, endIndex: 10).Result;
+            return Ok(matchList);
+        }
+
+        public IHttpActionResult GetMatchByGameId(long gameId)
+        {
+            IRiotClient client = new RiotClient();
+
+            var match = client.GetMatchAsync(gameId).Result;
+            return Ok(match);
         }
     }
 }

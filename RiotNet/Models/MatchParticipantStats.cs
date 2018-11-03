@@ -23,6 +23,7 @@ namespace RiotNet.Models
         /// </summary>
         public int Assists { get; set; }
 
+        public int KDA { get { return Deaths == 0 ? Kills + Assists : Kills + Assists / Deaths; } }
         /// <summary>
         /// Gets or sets the champion level at the end of the game.
         /// </summary>
