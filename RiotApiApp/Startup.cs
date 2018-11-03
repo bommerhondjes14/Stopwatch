@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Owin;
 using Owin;
+using RiotApiApp.Models;
 using RiotNet;
 using RiotNet.Models;
 
@@ -17,10 +18,11 @@ namespace RiotApiApp
 
         private void SetDefaultSettings()
         {
+            ApiKey key = new ApiKey();
             RiotClient.DefaultPlatformId = PlatformId.EUW1;
             RiotClient.DefaultSettings = () => new RiotClientSettings
             {
-                ApiKey = "RGAPI-5bbe0674-ef30-48ed-b5a1-9612ac3864d8" // Replace this with your API key, of course.
+                ApiKey = key.Api_Key // Replace this with your API key, of course.
             };
         }
     }
