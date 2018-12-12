@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDB8A01D-A443-41C0-9FE3-FC3ED2FEFC24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Stopwatch.Core</RootNamespace>
+    <AssemblyName>Stopwatch.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.5.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.5.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.1\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=3.3.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.2.5.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.8.13.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.5.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.9.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.13\lib\net47\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="Business\Domain\ChampionEndpoint\ChampionDto.cs" />
+    <Compile Include="Business\Domain\ChampionEndpoint\ChampionListDto.cs" />
+    <Compile Include="Business\Domain\ChampionEndpoint\ChampionRotationDto.cs" />
+    <Compile Include="Business\Domain\LeagueEndpoint\LeagueDto.cs" />
+    <Compile Include="Business\Domain\LeagueEndpoint\LeaguePositionDto.cs" />
+    <Compile Include="Business\Domain\LeagueEndpoint\MiniSeriesDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\BannedChampionDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\EventDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\FrameDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MasteryDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MatchDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MatchDetailDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MatchListDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MatchReferenceDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MatchSummaryDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\MatchTimelineDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\ParticipantDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\ParticipantFrameDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\ParticipantIdentityDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\ParticipantStatsDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\ParticipantTimelineDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\ParticipantTimelineDataDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\PlayerDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\PositionDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\RuneDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\TeamBanDto.cs" />
+    <Compile Include="Business\Domain\MatchEndpoint\TeamStatsDto.cs" />
+    <Compile Include="Business\Domain\QueueDto.cs" />
+    <Compile Include="Business\Services\ChampionEndpoint\ChampionService.cs" />
+    <Compile Include="Business\Services\ChampionEndpoint\IChampionService.cs" />
+    <Compile Include="Business\Services\LeagueEndpoint\ILeagueService.cs" />
+    <Compile Include="Business\Services\LeagueEndpoint\LeagueService.cs" />
+    <Compile Include="Business\Services\MatchEndpoint\IMatchService.cs" />
+    <Compile Include="Business\Services\MatchEndpoint\MatchService.cs" />
+    <Compile Include="Business\Domain\SummonerEndpoint\SummonerDto.cs" />
+    <Compile Include="Business\Domain\SummonerEndpoint\SummonerBaseDto.cs" />
+    <Compile Include="Business\Domain\SummonerEndpoint\SummonerBaseListDto.cs" />
+    <Compile Include="Business\StopwatchContext.cs" />
+    <Compile Include="Business\Repositories\Repository.cs" />
+    <Compile Include="Business\UnitOfWork.cs" />
+    <Compile Include="Data\IUnitOfWork.cs" />
+    <Compile Include="Data\IRepositories\ICourseRepository.cs" />
+    <Compile Include="Data\IRepositories\IRepository.cs" />
+    <Compile Include="Infra\Enums\CultureInfoExtensionDto.cs" />
+    <Compile Include="Infra\Enums\GameModeDto.cs" />
+    <Compile Include="Infra\Enums\GameTypeDto.cs" />
+    <Compile Include="Infra\Enums\LaneDto.cs" />
+    <Compile Include="Infra\Enums\LanguageDto.cs" />
+    <Compile Include="Infra\Enums\LeagueEndpointEnums\Tier.cs" />
+    <Compile Include="Infra\Enums\MapTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\AscendedTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\BuildingTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\CapturedPointDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\EventTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\LaneTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\LevelUpTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\MonsterSubTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\MonsterTypeDto.cs" />
+    <Compile Include="Infra\Enums\PlatformDto.cs" />
+    <Compile Include="Infra\Enums\RegionDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\SeasonDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\TowerTypeDto.cs" />
+    <Compile Include="Infra\Enums\MatchEndpointEnums\WardTypeDto.cs" />
+    <Compile Include="Infra\Enums\RoleDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infra\Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RiotSharp\RiotSharp.csproj">
+      <Project>{de145b82-c9bd-493a-a95c-1b96b6ec13f9}</Project>
+      <Name>RiotSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
