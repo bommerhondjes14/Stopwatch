@@ -44,7 +44,9 @@ namespace Stopwatch.Controllers
         public async Task<ActionResult> MatchList()
         {
             MatchListDto matchList = await _matchService.GetRecentMatchListAsync(RegionDto.euw, "Bommerhond");
+            MatchDto matchDto = await _matchService.GetMatchAsync(RegionDto.euw, matchList.Matches.First().GameId);
 
+            await _matchService.Test();
             return View("Index");
         }
     }

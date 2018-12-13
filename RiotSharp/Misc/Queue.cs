@@ -2,6 +2,7 @@
 {
     public static class Queue
     {
+
         /// <summary>
         /// Solo queue 5 vs 5
         /// </summary>

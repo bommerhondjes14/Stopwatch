@@ -34,17 +34,17 @@ namespace Stopwatch.Core.Business.Domain.MatchEndpoint
         /// <summary>
         /// Current account ID.
         /// </summary>
-        public long CurrentAccountId { get; set; }
+        public string CurrentAccountId { get; set; }
 
         /// <summary>
         /// Account ID.
         /// </summary>
-        public long AccountId { get; set; }
+        public string AccountId { get; set; }
 
         /// <summary>
         /// Summoner ID.
         /// </summary>
-        public long SummonerId { get; set; }
+        public string SummonerId { get; set; }
 
         /// <summary>
         /// Summoner name.

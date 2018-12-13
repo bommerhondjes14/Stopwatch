@@ -12,5 +12,7 @@ namespace Stopwatch.Core.Business.Services.MatchEndpoint
     {
         Task<MatchListDto> GetRecentMatchListAsync(RegionDto region, string summonerName);
         Task<MatchDto> GetMatchAsync(RegionDto region, long matchId);
+
+        Task Test();
     }
 }

@@ -1,4 +1,4 @@
-using Stopwatch.Core.Data.IRepositories;
+terusing Stopwatch.Core.Data.IRepositories;
 using System.Collections.Generic;
 
 namespace Stopwatch.Core.Data.IRepositories

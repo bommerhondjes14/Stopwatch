@@ -43,6 +43,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -97,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiKeys.cs" />
     <Compile Include="AutoMapperConfiguration.cs" />
     <Compile Include="Business\Domain\ChampionEndpoint\ChampionDto.cs" />
     <Compile Include="Business\Domain\ChampionEndpoint\ChampionListDto.cs" />
@@ -126,6 +130,19 @@
     <Compile Include="Business\Domain\MatchEndpoint\TeamBanDto.cs" />
     <Compile Include="Business\Domain\MatchEndpoint\TeamStatsDto.cs" />
     <Compile Include="Business\Domain\QueueDto.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\BlockItemStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\BlockStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\ChampionListStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\ChampionSpellStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\ChampionStandAloneStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\ChampionStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\ChampionStatsStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\InfoStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\LevelTipStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\PassiveStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\RecommendedStatic.cs" />
+    <Compile Include="Business\Domain\StaticEndpoint\Champion\SkinStatic.cs" />
+    <Compile Include="Business\Repositories\StaticChampionRepository.cs" />
     <Compile Include="Business\Services\ChampionEndpoint\ChampionService.cs" />
     <Compile Include="Business\Services\ChampionEndpoint\IChampionService.cs" />
     <Compile Include="Business\Services\LeagueEndpoint\ILeagueService.cs" />
@@ -138,6 +155,7 @@
     <Compile Include="Business\StopwatchContext.cs" />
     <Compile Include="Business\Repositories\Repository.cs" />
     <Compile Include="Business\UnitOfWork.cs" />
+    <Compile Include="Data\IRepositories\IStaticChampionRepository.cs" />
     <Compile Include="Data\IUnitOfWork.cs" />
     <Compile Include="Data\IRepositories\ICourseRepository.cs" />
     <Compile Include="Data\IRepositories\IRepository.cs" />

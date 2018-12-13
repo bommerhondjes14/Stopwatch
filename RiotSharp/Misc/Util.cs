@@ -7,6 +7,7 @@ namespace RiotSharp.Misc
 {
     internal static class Util
     {
+
         public static DateTime BaseDateTime = new DateTime(1970, 1, 1);
 
         public static DateTime ToDateTimeFromMilliSeconds(this long millis)

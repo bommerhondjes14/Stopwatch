@@ -22,21 +22,6 @@ namespace Stopwatch.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-            InitializeStaticChampionData(context);
-        }
-
-        private async void InitializeStaticChampionData(ApplicationDbContext dbContext)
-        {
-            //if (!dbContext.StaticChampions.Any())
-            //{
-            //    HttpClient httpClient = new HttpClient();
-            //    var championJsonLink = "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json";
-            //    var championJsonString = await httpClient.GetStringAsync(championJsonLink);
-            //    var result = JsonConvert.DeserializeObject<StaticChampionList>(championJsonString);
-
-            //    dbContext.StaticChampions.AddRange(result.Data.Values.ToList());
-            //    dbContext.SaveChanges();
-            //}
         }
     }
 }

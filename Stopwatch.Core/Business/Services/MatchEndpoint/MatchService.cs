@@ -21,7 +21,7 @@ namespace Stopwatch.Core.Business.Services.MatchEndpoint
 
         public MatchService()
         {
-            _riotApi = RiotApi.GetDevelopmentInstance(WebConfigurationManager.AppSettings["ApiKey"]);
+            _riotApi = RiotApi.GetDevelopmentInstance(ApiKeys.RiotApiKey);
         }
 
         public async Task<MatchListDto> GetRecentMatchListAsync(RegionDto regionDto, string summonerName)
@@ -40,6 +40,12 @@ namespace Stopwatch.Core.Business.Services.MatchEndpoint
 
             Match match = await _riotApi.Match.GetMatchAsync(region, matchId);
             return Mapper.Map<MatchDto>(match);
+        }
+
+        public async Task Test()
+        {
+            var test1 = await _riotApi.StaticData.Champions.GetAllAsync("8.24.1");
+            var test2 = await _riotApi.StaticData.Champions.GetByKeyAsync("266", "8.24.1");
         }
     }
 }
